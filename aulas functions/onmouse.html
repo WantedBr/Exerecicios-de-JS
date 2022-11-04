@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo js</title>
+    <style>
+        .area {
+            font: 35px arial;
+            background-color: aqua;
+            color: black;
+            width: 200px;
+            line-height: 200px;
+            height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()">
+        OLAVO
+    </div>
+    <script>
+        let area = document.getElementsByClassName('area')[0]
+        function clicar() {
+
+            area.innerHTML = 'PAPAI'
+            area.style.background = 'purple'
+
+        }
+        function entrar() {
+            area.innerHTML = 'MAMAE'
+            area.style.background = 'pink'
+        }
+        function sair() {
+            area.innerHTML = 'SAIRAM'
+            area.style.background = 'red'
+        }
+
+    </script>
+</body>
+
+</html>

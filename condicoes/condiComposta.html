@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: blue;
+            padding: 20px;
+
+        }
+
+        .botao {
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 100px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sua Nacionalidade</h1>
+    <div class="botao">
+        Seu país <input type="text" id="box1">
+        <input type="button" value="Verificar" onclick="clicar()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function clicar() {
+            var box = document.getElementById('box1')
+            var box = String(box.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `<p> seu país é ${box}</p>`
+            if (box == 'brasil') {
+                res.innerHTML += `<p>Você é brasileiro!`
+            } else {
+                res.innerHTML += `<p>você é estrangeiro!</p>`
+            }
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
