@@ -20,8 +20,11 @@
             var resultado = document.getElementById("res")
             var horas = Number(caixa.value)
             resultado.innerHTML = `são exatamente ${horas}H `
+
             if (horas < 12) { resultado.innerHTML += `Bom dia!` }
+
             else if (horas < 18) { resultado.innerHTML += `Boa tarde!` }
+
             else { resultado.innerHTML += `Boa noite!` }
 
         }
