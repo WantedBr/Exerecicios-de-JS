@@ -10,9 +10,21 @@
 
 <body>
     <h1>Relógio</h1>
-    <input type="text" id="box">
-    <input type="button" value="horas" id="botao">
+    Qual é a hora: <input type="number" id="box">
+    <input type="button" value="pronto" onclick="calcular()">
+    <div id="res"></div>
+
     <script>
+        function calcular() {
+            var caixa = document.getElementById("box")
+            var resultado = document.getElementById("res")
+            var horas = Number(caixa.value)
+            resultado.innerHTML = `são exatamente ${horas}H `
+            if (horas < 12) { resultado.innerHTML += `Bom dia!` }
+            else if (horas < 18) { resultado.innerHTML += `Boa tarde!` }
+            else { resultado.innerHTML += `Boa noite!` }
+
+        }
 
     </script>
 </body>
